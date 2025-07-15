@@ -1,0 +1,12 @@
+shiny::runApp()
+install.packages("shinylive")
+library(shinylive)
+shinylive::export(
+appdir = ".",
+destdir = "ShinyApp_Web",
+external_dependencies = TRUE
+)
+runApp()
+pak::pak("posit-dev/shinylive")
+install.packages("pak")
+pak::pak("posit-dev/r-shinylive")
